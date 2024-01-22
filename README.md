@@ -2,6 +2,8 @@
 
 This Python script performs a redundancy check on transmitted data using a long division technique. It checks for errors in the transmitted bits by calculating the remainder and syndrome.
 
+<strong>To Install with PIP</strong>
+
 ## Usage
 
 1. **Install Python:**
