@@ -8,7 +8,8 @@ This Python script performs a redundancy check on transmitted data using a long 
    Ensure you have Python installed on your system. You can download it from [python.org](https://www.python.org/).
 
 2. **Run the Script:**
-   If installed with pip
+
+    If installed with pip
 
    ```bash
    cyc
