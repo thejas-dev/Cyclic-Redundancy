@@ -1,2 +1,2 @@
 [console_scripts]
-cyc = cyc.cyc:main
+cyc = src.cyc:main

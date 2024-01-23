@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.3'
+VERSION = '0.0.6'
 DESCRIPTION = 'Cyclic redundancy check for the given data bits'
 LONG_DESCRIPTION = 'A simple cyclic redundancy script which can take dividend and divisor as input and perform xor long division, encode it, decode it and finally tells whether there is any loss in transfer of data by checking the syndrome.'
 
@@ -8,7 +8,7 @@ LONG_DESCRIPTION = 'A simple cyclic redundancy script which can take dividend an
 setup(
     name="cyclicredundancypython",
     version=VERSION,
-    scripts=['cyc/cyc.py'],
+    scripts=['src/cyc.py'],
     author="Thejas hari",
     author_email="<thejaskala308@gmail.com>",
     description=DESCRIPTION,
@@ -16,7 +16,7 @@ setup(
     packages=find_packages(),
      entry_points={
         'console_scripts': [
-            'cyc = cyc.cyc:main',
+            'cyc = src.cyc:main',
         ],
     },
     install_requires=[],

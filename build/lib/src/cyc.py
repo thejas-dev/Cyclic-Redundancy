@@ -24,7 +24,7 @@ def main():
     dividend = input("Enter Dividend:- ")
     divisor = input("Enter Divisor:- ")
     rem = longXDv('0b'+dividend,'0b'+divisor)
-    print(f'The remainder is:- {int(rem)}\nThe Codeword is:- {dividend}{int(rem)}')
+    print(f"The remainder is:- {rem}\nThe Codeword is:- {dividend}{int(rem)}")
     syndrome = longXDv('0b'+dividend,'0b'+divisor,str(int(rem)))
     if(int(syndrome) == 0):
         print(f"\033[1;93mThe Syndrome is zero, hence the transmitted bits are error freeee...\033[0m")
