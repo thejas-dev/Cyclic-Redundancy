@@ -11,7 +11,6 @@ def longXDv(dividend,divisor,length,appender='000'):
             else:
                 dividend = format((int(dividend,2) ^ 0b0),'0'+length+'b')
         if(i+1 == len(appender)+1):
-            # print(dividend[len(dividend) - (int(length)-1):])
             if(len(dividend) > (int(length)-1)):
                 return dividend[len(dividend) - (int(length)-1):]
             else:
