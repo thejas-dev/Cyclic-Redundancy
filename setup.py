@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.6'
+VERSION = '0.0.7'
 DESCRIPTION = 'Cyclic redundancy check for the given data bits'
 LONG_DESCRIPTION = 'A simple cyclic redundancy script which can take dividend and divisor as input and perform xor long division, encode it, decode it and finally tells whether there is any loss in transfer of data by checking the syndrome.'
 
