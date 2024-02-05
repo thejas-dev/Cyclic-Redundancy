@@ -1,7 +1,11 @@
 def longXDv(dividend,divisor,length,appender='000'):
     for i in range((len(appender) + 1)):
         if i == 0:
-            dividend = format(int(dividend,2) ^ int(divisor,2),'0'+length+'b')
+            if(dividend[0] == '1'):
+                dividend = format(int(dividend,2) ^ int(divisor,2),'0'+length+'b')
+            else:
+                dividend = format((int(dividend,2) ^ 0b0),'0'+length+'b')
+            # dividend = format(int(dividend,2) ^ int(divisor,2),'0'+length+'b')
         else:
             dividend = list(dividend + appender[i-1])
             dividend.pop(0)
