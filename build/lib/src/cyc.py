@@ -1,11 +1,17 @@
 def longXDv(dividend,divisor,length,appender='000'):
+    tempDividend = dividend.split('0b')[1]
+    tempDivisor = divisor.split('0b')[1]
+    if(len(tempDividend) > len(tempDivisor)):
+        appender = tempDividend[-int(len(tempDividend)-len(tempDivisor)):] + appender
+        tempDividend = tempDividend[:-int(len(tempDividend)-len(tempDivisor))]
+        dividend = '0b' + tempDividend
+
     for i in range((len(appender) + 1)):
         if i == 0:
-            if(dividend[0] == '1'):
+            if(dividend.split('0b')[1][0] == '1'):
                 dividend = format(int(dividend,2) ^ int(divisor,2),'0'+length+'b')
             else:
                 dividend = format((int(dividend,2) ^ 0b0),'0'+length+'b')
-            # dividend = format(int(dividend,2) ^ int(divisor,2),'0'+length+'b')
         else:
             dividend = list(dividend + appender[i-1])
             dividend.pop(0)
@@ -14,6 +20,7 @@ def longXDv(dividend,divisor,length,appender='000'):
                 dividend = format(int(dividend,2) ^ int(divisor,2),'0'+length+'b')
             else:
                 dividend = format((int(dividend,2) ^ 0b0),'0'+length+'b')
+        print(dividend)
         if(i+1 == len(appender)+1):
             if(len(dividend) > (int(length)-1)):
                 return dividend[len(dividend) - (int(length)-1):]
@@ -31,7 +38,7 @@ def main():
     codewordLength = input("Enter the codeword length:- ")
     dividend = input("Enter Dividend:- ")
     divisor = input("Enter Divisor:- ")
-    length = str(len(dividend))
+    length = str(len(divisor))
     appender = ''
     rangel = int(codewordLength) - len(dividend)
     for k in range(rangel):
